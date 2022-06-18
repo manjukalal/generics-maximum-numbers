@@ -1,18 +1,22 @@
 package com.bridgelabz;
 import java.util.Arrays;
-public class MaximumNumber {
-    public static <T> T maximum(T... a) {
+public class MaximumNumber <T> {
+    public T maximum(T... a) {
         Arrays.sort(a);
-        return a[a.length - 1];
+        T max = a[a.length - 1];
+        printMax(max);
+        return max;
+    }
+    private void printMax(T max){
+        System.out.println("maximum value is : " +max);
     }
 
     public static void main(String[] args) {
-        System.out.println("maximum integer number is: " + maximum(3, 6, 1, 13, 56, 18));
-        System.out.println("maximum flot number is: " + maximum(1.2f, 5.6f, 7.6f, 2.2f, 2.2f));
-        System.out.println("maximum value string name is: " + maximum("apple", "banana","coconut" ,"jackfruit", "grapes"));
+        MaximumNumber<Integer> integermaximum = new MaximumNumber<>();
+        MaximumNumber<Float> floatMaximum = new MaximumNumber<>();
+        MaximumNumber<String> stringMaximum = new MaximumNumber<>();
+        integermaximum.maximum(4,5,7,5,3);
+        floatMaximum.maximum(7.4f,5.6f,3.5f,2.2f);
+        stringMaximum.maximum("apple","banana","coconut","grapes","jackfruit");
     }
 }
-
-
-
-
