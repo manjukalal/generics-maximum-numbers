@@ -32,7 +32,7 @@ public class MaximumNumber {
         Integer l2 = b.length();
         Integer l3 = c.length();
         Integer max = l1;
-        String result3;
+        
       if (l1.compareTo(l2)>0) {
           max = l1;
           System.out.println("maxim string is : " +a);
